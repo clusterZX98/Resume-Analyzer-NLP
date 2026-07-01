@@ -334,9 +334,7 @@ To contribute:
 
 ## Author
 
-**Shagun Srivastava**
-
-AI Engineer
+**PIYUSH RAWAT**
 
 Data Scientist
 
