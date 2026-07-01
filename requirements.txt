@@ -1,0 +1,22 @@
+# Core Data Processing
+pandas
+numpy
+
+# NLP
+nltk
+spacy
+
+# Machine Learning
+scikit-learn
+joblib
+
+# PDF Processing
+pdfplumber
+
+# Frontend
+streamlit
+
+# Visualization
+matplotlib
+seaborn
+plotly
