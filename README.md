@@ -1,77 +1,79 @@
-###Intelligent Resume Analyzer & Job Matching System
-#An end-to-end NLP-based Resume Analyzer and Job Matching System built using Python, NLP, Machine Learning, and Streamlit.
+<!-- Intelligent Resume Analyzer and Job Matching System -->
 
-This project helps candidates analyze their resumes, extract important information, calculate ATS scores, identify skill gaps, and match resumes against job descriptions.
+An end-to-end Resume Analyzer and Job Matching System built using Python, Natural Language Processing, Machine Learning, and Streamlit.
 
-###Project Overview
-Recruiters often receive hundreds of resumes for a single job opening.
+The application automates resume screening by extracting useful information from PDF resumes, performing NLP-based analysis, calculating ATS scores, identifying missing skills, and matching resumes with job descriptions. It provides recruiters and job seekers with a simple interface to evaluate resumes and understand their strengths and improvement areas.
 
-This project automates the resume screening process by:
+<!-- Project Overview -->
 
-Extracting valuable information from resumes
-Performing NLP preprocessing
-Matching resumes with job descriptions
-Calculating ATS scores
-Identifying missing skills
-Providing insights through an interactive dashboard
+Recruiters often spend significant time reviewing hundreds of resumes for a single job opening. This project simplifies that process by automating resume analysis and providing meaningful insights through NLP and machine learning techniques.
+
+The system is capable of:
+
+Extracting text from PDF resumes
+Processing resume content using NLP
+Identifying technical skills, education, and experience
+Calculating ATS compatibility scores
+Comparing resumes with job descriptions
+Detecting missing skills
+Displaying results through an interactive dashboard
 Features
-Resume Analysis
-Upload Resume PDF
-Extract Text from PDF
-Clean and Process Resume Content
-NLP Processing
-Text Cleaning
+<!-- Resume Analysis -->
+Upload resume in PDF format
+Extract text from resumes
+Clean and preprocess resume content
+Natural Language Processing
+Text cleaning
 Tokenization
-Stopword Removal
+Stopword removal
 Lemmatization
-POS Tagging
-Named Entity Recognition (NER)
+Part-of-Speech tagging
+Named Entity Recognition
 Information Extraction
-Skills Extraction
-Education Extraction
-Experience Extraction
-ATS & Job Matching
-ATS Score Calculator
-Resume vs Job Description Matching
-Cosine Similarity Based Matching
-Skill Gap Analysis
-Interactive Dashboard
-Resume Statistics
-NLP Analysis
-Skill Visualization
-ATS Dashboard
-Job Matching Dashboard
-Project Architecture
+Skill extraction
+Education extraction
+Experience extraction
+ATS and Job Matching
+ATS score calculation
+Resume and job description matching
+Cosine similarity based matching
+Skill gap analysis
+Dashboard
+Resume statistics
+<!-- NLP analysis -->
+Skill visualization
+ATS score dashboard
+Job matching dashboard
+<!-- Project Workflow -->
 Resume PDF
-     │
-     ▼
+    │
+    ▼
 PDF Parser
-     │
-     ▼
+    │
+    ▼
 NLP Preprocessing
-     │
-     ▼
+    │
+    ▼
 Information Extraction
- ├── Skills
- ├── Education
- └── Experience
-     │
-     ▼
-ATS Score Calculator
-     │
-     ▼
+    ├── Skills
+    ├── Education
+    └── Experience
+    │
+    ▼
+ATS Score Calculation
+    │
+    ▼
 Job Matching Engine
-     │
-     ▼
+    │
+    ▼
 Skill Gap Analysis
-     │
-     ▼
+    │
+    ▼
 Streamlit Dashboard
 Project Structure
-Resume_Analyzer/
+<!-- Resume_Analyzer -->
 │
-├── backend/
-│   ├── __init__.py
+├── backend
 │   ├── pdf_parser.py
 │   ├── preprocess.py
 │   ├── skill_extractor.py
@@ -79,34 +81,43 @@ Resume_Analyzer/
 │   ├── experience_extractor.py
 │   ├── ats_score.py
 │   ├── job_matcher.py
+│   ├── classifier.py
+│   ├── ner_extractor.py
+│   ├── pos_tagger.py
 │   └── utils.py
 │
-├── frontend/
+├── frontend
 │   └── app.py
 │
-├── data/
-│   └── skills.csv
+├── data
+│   ├── resumes
+│   ├── jobs
+│   ├── skills.csv
+│   └── resume_dataset.csv
 │
-├── models/
+├── models
+│   ├── classifier.pkl
+│   ├── tfidf.pkl
+│   └── label_encoder.pkl
 │
-├── notebooks/
+├── notebooks
 │   └── model_training.ipynb
 │
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-Tech Stack
+<!-- Technologies Used -->
 Programming Language
 Python
-NLP Libraries
+Natural Language Processing
 NLTK
 SpaCy
 Machine Learning
-Scikit-Learn
+Scikit-learn
 Data Processing
 Pandas
 NumPy
-Visualization
+Data Visualization
 Plotly
 Matplotlib
 Seaborn
@@ -115,94 +126,114 @@ PDFPlumber
 Frontend
 Streamlit
 Installation
-Clone Repository
+
+<!-- Clone the repository. -->
+
 git clone https://github.com/YOUR_USERNAME/Resume-Analyzer-NLP.git
 
+Move into the project directory.
+
 cd Resume-Analyzer-NLP
-Create Virtual Environment
-python -m venv venv
-Activate Virtual Environment
+
+Create a virtual environment.
+
+python -m venv .venv
+
+Activate the virtual environment.
+
 Windows
-venv\Scripts\activate
-Linux / Mac
-source venv/bin/activate
-Install Dependencies
+
+.venv\Scripts\activate
+
+Linux or macOS
+
+source .venv/bin/activate
+
+Install the required packages.
+
 pip install -r requirements.txt
-Download SpaCy Model
+
+Download the SpaCy language model.
+
 python -m spacy download en_core_web_sm
-Run Application
+
+Run the application.
+
 streamlit run frontend/app.py
-Application URL:
+
+The application will be available at:
 
 http://localhost:8501
-NLP Concepts Implemented
+NLP Techniques Used
 Text Cleaning
 Tokenization
 Stopword Removal
 Lemmatization
-POS Tagging
-Named Entity Recognition (NER)
-TF-IDF
+Part-of-Speech Tagging
+Named Entity Recognition
+TF-IDF Vectorization
 Cosine Similarity
 Information Extraction
 Text Analytics
-Future Enhancements
-Machine Learning
-Resume Classification
-XGBoost Classifier
-Candidate Ranking Engine
-Advanced NLP
-Word2Vec
-FastText
-GloVe Embeddings
-Generative AI
-Resume Summarization
-AI Career Coach
-Interview Question Generator
-Resume Improvement Suggestions
-Production Features
-FastAPI Backend
-PostgreSQL Database
-Docker Containerization
-AWS Deployment
-Authentication System
-Recruiter Dashboard
-Multi Resume Upload
-Resume Comparison
-Learning Outcomes
-This project demonstrates practical implementation of:
+Future Improvements
 
-Natural Language Processing (NLP)
-Information Extraction
+<!-- The project can be extended with additional features such as: -->
+
+Resume classification using advanced machine learning models
+Candidate ranking system
+Word2Vec, FastText, and GloVe embeddings
+AI-based resume summarization
+Career recommendation system
+Interview question generation
+Resume improvement suggestions
+FastAPI backend
+PostgreSQL integration
+Docker deployment
+AWS deployment
+User authentication
+Recruiter dashboard
+Multiple resume upload
+Resume comparison
+Learning Outcomes
+
+<!-- This project demonstrates practical implementation of: -->
+
+Natural Language Processing
 Resume Parsing
-ATS Systems
+Information Extraction
+ATS Score Evaluation
 Recommendation Systems
 Machine Learning Pipelines
 Streamlit Application Development
-End-to-End Project Development
+End-to-End AI Project Development
 Use Cases
-HR Resume Screening
-Recruitment Automation
-ATS Score Evaluation
-Resume Improvement
-Skill Gap Analysis
-Candidate Ranking
-Career Guidance
+Resume screening for recruiters
+Recruitment automation
+ATS score evaluation
+Resume improvement
+Skill gap identification
+Candidate ranking
+Career guidance
 Contributing
-Contributions are welcome.
 
-Fork the repository
-Create a new branch
-Commit your changes
-Push the branch
-Create a Pull Request
-Author
-Shagun Srivastava
+<!-- Contributions are welcome. -->
 
-AI Engineer
+If you would like to improve the project:
+
+Fork the repository.
+Create a new feature branch.
+Commit your changes.
+Push the branch.
+Open a Pull Request.
+
+
+<!-- Author -->
+
+PIYUSH RAWAT
+
 Data Scientist
 NLP Enthusiast
-⭐ Support
-If you found this project useful, please give it a ⭐ on GitHub.
 
-Your support motivates future improvements and open-source contributions.
+<!-- License -->
+
+This project is intended for educational and portfolio purposes. Feel free to use or modify it for learning and personal development.
